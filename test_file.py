@@ -10,5 +10,5 @@ s = Sequence("test.csv")
 df = s.all_datasets()
 
 print(df)
-df.to_csv("test_output.csv")
+# df.to_csv("test_output.csv")
 # Check the format of output file in "test_output.csv"
