@@ -1,3 +1,5 @@
+import numpy as np
+import pandas as pd
 class Sequence:
     def __init__(self, file_path=None):
         if file_path:
@@ -21,10 +23,10 @@ class Sequence:
         return reduced
 
     def generate(self):
-        self.p_diff_1 = difference(self.p)
-        self.p_diff_2 = difference(self.p_diff_1)
-        self.p_ratio_1 = ratio(self.p)
-        self.p_ratio_2 = ratio(self.p_ratio_1)
+        self.p_diff_1 = self.difference(self.p)
+        self.p_diff_2 = self.difference(self.p_diff_1)
+        self.p_ratio_1 = self.ratio(self.p)
+        self.p_ratio_2 = self.ratio(self.p_ratio_1)
 
     def all_datasets(self):
         self.generate()
